@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* 右侧导航栏：顺序在内容区之后，宽度由内容决定，右对齐，背景与 body 一致 */
+/* 右侧导航栏 */
 .sidebar {
     order: 2;
     background: #fafafa;
@@ -60,7 +60,7 @@ body {
     color: #000;
 }
 
-/* 主要内容区域：占满剩余空间，右侧不留 padding */
+/* 主要内容区域 */
 .main-content {
     flex: 1;
     order: 1;
@@ -86,17 +86,18 @@ body {
     border-radius: 4px;
 }
 
-/* 文章/发行列表项 —— 去掉分割线，缩小行距 */
+/* ===== release 列表页 ===== */
 .post-item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;      /* 不同发行之间的间距 */
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .post-item h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.05rem;   /* 同一发行的中英文紧贴 */
     font-size: 1rem;
     font-weight: normal;
+    line-height: 1.4;
 }
 
 .post-item h2 a {
@@ -118,7 +119,7 @@ body {
     margin-bottom: 1rem;
 }
 
-/* release 页面链接样式 */
+/* release 链接样式 */
 .release-link {
     text-decoration: none;
     color: #333;
@@ -130,22 +131,84 @@ body {
     color: #0066cc;
 }
 
-/* ===== 新增：未发行文字灰色（全局生效） ===== */
+/* 未发行文字灰色 */
 .unreleased {
-    color: #999 !important;   /* 灰色，使用 !important 确保优先级 */
+    color: #999 !important;
 }
 
-/* 详情页样式（左右对齐容器等） */
-.release-detail p {
-    margin-bottom: 1.2rem;
+/* ===== release 详情页 ===== */
+.release-detail {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 850px;         /* 限制整体宽度，让右侧栏靠左 */
 }
-.custom-list {
-    padding-left: 0;
-    list-style-position: inside;
-    margin-bottom: 1.2rem;
+
+.release-left {
+    flex: 1;
+    min-width: 0;
 }
-.custom-list li {
-    margin-bottom: 0.25rem;
+
+.release-right {
+    flex-shrink: 0;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.release-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.release-right iframe {
+    width: 100%;
+    border: 0;
+}
+
+.release-date {
+    font-size: 0.7rem;
+    color: #888;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.release-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.track-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+.track-list li {
+    margin-bottom: 0.1rem;
+    line-height: 1.4;
+}
+
+.release-credits {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.release-credits p {
+    margin: 0;
+}
+
+.release-links p {
+    margin: 0 0 0.2rem 0;
+}
+.release-links a {
+    color: blue;
+    text-decoration: none;
+}
+.release-links a:hover {
+    text-decoration: underline;
 }
 
 /* 响应式：小屏幕时改为上下布局 */
@@ -178,5 +241,13 @@ body {
         width: 90%;
         margin-top: 10vh;
     }
-    /* 媒体查询内不再需要 .unreleased 了，因为已移到全局 */
+    .release-detail {
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 100%;
+    }
+    .release-right {
+        width: 100%;
+        max-width: 400px;
+    }
 }
