@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#1 oil-fried ghost album launch event - nestled</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* event 详情页布局 */
+        .event-detail {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            max-width: 900px;
+        }
+        .event-poster {
+            flex-shrink: 0;
+            width: 320px;
+        }
+        .event-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+        /* 海报下方的小字说明 */
+        .poster-credit {
+            font-size: 0.75rem;
+            color: #333;
+            margin-top: 0.5rem;
+        }
+        .event-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .event-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+        .event-date,
+        .event-venue {
+            margin-bottom: 0.3rem;
+        }
+        .event-address {
+            font-size: 0.8rem;
+            color: #888;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+        .event-guests {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .event-guests .special {
+            font-style: italic;
+            color: #999;
+        }
+        @media (max-width: 768px) {
+            .event-detail {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .event-poster {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="logo">nestled</a>
+        <nav>
+            <ul>
+                <li><a href="release.html">release</a></li>
+                <li><a href="event.html">event</a></li>
+                <li><a href="article.html">article</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+		        <!-- 社交图标 -->
+        <div class="sidebar-social">
+            <a href="https://www.instagram.com/youarenestled/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4.5"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+            <a href="https://nestled.bandcamp.com/" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <div class="event-detail">
+
+            <!-- 左：海报 + 小字说明 -->
+            <div class="event-poster">
+                <img src="images/event-001-poster.jpg" alt="oil-fried ghost album launch event poster">
+                <div class="poster-credit">illustration: 41</div>
+            </div>
+
+            <!-- 右：活动信息 -->
+            <div class="event-info">
+                <div class="event-title"><em>oil-fried ghost</em> album launch event</div>
+
+                <div class="event-date">2026.10.04 20:00</div>
+                <div class="event-venue">
+                    <a href="https://www.instagram.com/nigallerynigallery/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">尼画廊 NI Gallery</a>
+                </div>
+
+                <div class="event-address">
+                    北京市朝阳区 798 七星中街 F03<br>
+                    f03, 798 qixing middle street, chaoyang district, beijing
+                </div>
+
+                <div class="event-guests">
+                    <div style="font-size: 0.75rem; color: #999; margin-bottom: 0.1rem;">special guest</div>
+                    <div><strong>秋山徹次 Tetuzi Akiyama</strong></div>
+                    <div><strong>孙一舟 Sun Yizhou</strong> + <strong>中村としまる Toshimaru Nakamura</strong></div>
+                </div>
+
+        </div>
+
+    </main>
+</body>
+</html>

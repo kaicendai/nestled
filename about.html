@@ -5,25 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about - nestled</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .about-content a,
+        .about-content a:link,
+        .about-content a:visited {
+            color: blue;
+            text-decoration: none;
+        }
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
         <a href="index.html" class="logo">nestled</a>
         <nav>
             <ul>
-                <!-- 如果你希望在 about 页也显示 home 菜单，可以取消注释下一行 -->
-                <!-- <li><a href="index.html">home</a></li> -->
                 <li><a href="release.html">release</a></li>
+                <li><a href="event.html">event</a></li>
                 <li><a href="article.html">article</a></li>
                 <li><a href="about.html">about</a></li>
             </ul>
         </nav>
+        <!-- 社交图标 -->
+        <div class="sidebar-social">
+            <a href="https://www.instagram.com/youarenestled/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4.5"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+            <a href="https://nestled.bandcamp.com/" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                </svg>
+            </a>
+        </div>
     </div>
     <main class="main-content">
         <h1 class="page-title">about</h1>
         <div class="about-content">
             <p>nestled is a collective founded in 2025. It currently exists in the form of a record label.<br>we prioritise physical formats in our releases.</p>
-            <p>logo design by luciano maggiore.</p>
+            <p><a href="https://www.instagram.com/lucianomaggioree/" target="_blank" rel="noopener noreferrer">luciano maggiore</a> designed the logo. <a href="https://www.instagram.com/run_bunny/" target="_blank" rel="noopener noreferrer">bunnyman</a> made an easy-to-use version for us.</p>
             <p>contact: nestled2025 [at] gmail [dot] com</p>
         </div>
     </main>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>260924 一个新的厂牌 a new label - nestled</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 双语分栏：标题与内容使用相同的 grid 结构，保证对齐 */
+        .article-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        .article-header .title-zh,
+        .article-header .title-en {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #999;
+        }
+        .article-bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        .article-bilingual .lang-zh,
+        .article-bilingual .lang-en {
+            min-width: 0;
+        }
+        @media (max-width: 768px) {
+            .article-header,
+            .article-bilingual {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .article-header {
+                margin-bottom: 1.5rem;
+            }
+            .article-bilingual {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html" class="logo">nestled</a>
+        <nav>
+            <ul>
+                <li><a href="release.html">release</a></li>
+		<li><a href="event.html">event</a></li>
+                <li><a href="article.html">article</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+        </nav>
+		        <!-- 社交图标 -->
+        <div class="sidebar-social">
+            <a href="https://www.instagram.com/youarenestled/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5"/>
+                    <circle cx="12" cy="12" r="4.5"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+            </a>
+            <a href="https://nestled.bandcamp.com/" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <!-- 标题：左右分栏 -->
+        <div class="article-header">
+            <div class="title-zh">一个新的厂牌</div>
+            <div class="title-en">a new label</div>
+        </div>
+
+        <div class="article-bilingual">
+
+            <!-- ===== 左：中文 ===== -->
+            <div class="lang-zh">
+                <p style="margin-bottom: 1.5rem;"><strong>赵子毅：</strong></p>
+
+                <p style="margin-bottom: 1.5rem;"><em>为一句无声的诺言默默地跟着你这么多年，当你累了倦了或是寂寞难言，总是全心全意地出现在你面前。爱是一个长久的诺言。</em>老话这样说。</p>
+
+                <p style="margin-bottom: 1.5rem;">我爱我家（nestled）始于 2025 年 10 月，是一家分别位于上海和北京的小型唱片公司，由阿岭和赵子毅结成，恰逢一周年，我们完成了我们的第一项作业。</p>
+
+                <p style="margin-bottom: 1.5rem;">作为一家厂牌，就是要感谢好多人，现在来讲，其中我要说：谢谢伊帆、41、小吉、可尼尼、卢西亚诺·马焦雷、燥眠夜、芦荟唱片、撒把芥末，还有暂时是秘密的一些名字，就是那些在开始之前就早早欣然决定要和我们一起玩玩的人。真是统统代表着善意和相信呀。</p>
+
+                <p style="margin-bottom: 1.5rem;">打开了这个包裹就发现其实里面有一个东西伸出了小手和小脚。ano 写了这么多遍字，他都不知道这个其实说的就是一句我爱我家。这个雀巢曾经可以相依偎，如今可以拆开来把玩。</p>
+
+                <p style="margin-top: 2rem; margin-bottom: 1.5rem;"><strong>阿岭：</strong></p>
+
+                <p style="margin-bottom: 1.5rem;">2025 年夏天，赵子毅和我准备做一个厂牌，到了秋天我们有了时间认真考虑，比如花整个晚上想名字。我们把做厂牌的想法告诉了朋友们，于是我们收到了录音，也发起了一些委托，睡不着的时候做了网站，约了第一个发行的设计和生产。</p>
+
+                <p style="margin-bottom: 1.5rem;">很快一年过去了，这件事需要一个明确的"开始"来启动。那么，就是现在。</p>
+
+                <p style="margin-bottom: 1.5rem;">这个厂牌叫 nestled，来源有些无厘头，有机会可以再讲。中文我们叫它"我爱我家"，我想里面会有轻松和较真，有一种面对更大苦涩的方法。</p>
+
+                <p style="margin-bottom: 1.5rem;">决定这个英文名的时候，我想到的是<em>那在哪儿：避难所？(wo ist das: zufluchtsort?)</em>，来自德国的诗人和乐手 michael barthel，他用这个短语做了专辑名和曲名，烹饪一些暧昧不清的磁带人声混合物。真好，你看几种语言说的可能是一样的东西。</p>
+            </div>
+
+            <!-- ===== 右：英文 ===== -->
+            <div class="lang-en">
+                <p style="margin-bottom: 1.5rem;"><strong>zhao ziyi:</strong></p>
+
+                <p style="margin-bottom: 1.5rem;"><em>For a silent promise, I have quietly followed you for so many years. When you are tired or weary, or lonely and unable to speak, I always appear before you with all my heart. Love is a lasting promise. </em>That's what the old saying says.</p>
+
+                <p style="margin-bottom: 1.5rem;">我爱我家 (nestled) began in october 2025. It is a small record label based in shanghai and beijing, formed by neciak and Zhao Ziyi. coinciding with its first anniversary, we have completed our first assignment.</p>
+
+                <p style="margin-bottom: 1.5rem;">as a label, you have to thank many people. for now, among them, I want to say: thank you yifan, 41, siugat, konini, luciano maggiore, zoomin' night, aloe records, sub jam, and some names that are secret for the time being—those who, before the beginning, had already happily decided early on to come and play with us. they all truly represent goodwill and trust.</p>
+
+                <p style="margin-bottom: 1.5rem;">when I opened this package, I found that something inside had actually stretched out little hands and feet. ano has written these words so many times, and he didn't even know that this is actually saying "我爱我家" This nest could once be nestled together; now it can be taken apart and played with.</p>
+
+                <p style="margin-top: 2rem; margin-bottom: 1.5rem;"><strong>neciak:</strong></p>
+
+                <p style="margin-bottom: 1.5rem;">In the summer of 2025, zhao ziyi and I were preparing to start a label. by autumn, we had time to think about it seriously. for example, spending entire evenings thinking up names. we told friends about the idea of starting a label, and so we received recordings and also initiated some commissions. when i couldn't sleep, i made the website, and then we arranged the design and production of the first release.</p>
+
+                <p style="margin-bottom: 1.5rem;">soon a year passed, and this thing needed a clear "beginning" to start. So, now is the time.</p>
+
+                <p style="margin-bottom: 1.5rem;">the label is called nestled. Its origin is a bit absurd; I can talk about it another time. In chinese we call it "我爱我家". i think there will be both lightness and seriousness in it, a way of facing a greater bitterness.</p>
+
+                <p style="margin-bottom: 1.5rem;">when deciding on the english name, I thought of where is that: refuge? (wo ist das: zufluchtsort?), from the german poet and musician michael barthel. he used this phrase as an album title and a song title, cooking up some ambiguous cassette-vocal mixtures. how nice—you see, several languages may be saying the same thing.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

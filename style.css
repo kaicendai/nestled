@@ -1,11 +1,11 @@
-/* 全局重置 */
+/* ===== 全局重置 ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 使用 flex 布局，让侧边栏自动撑开 */
+/* ===== 页面整体：flex 布局，右侧为导航栏 ===== */
 body {
     display: flex;
     flex-direction: row;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* 右侧导航栏 */
+/* ===== 右侧导航栏 ===== */
 .sidebar {
     order: 2;
     background: #fafafa;
@@ -25,6 +25,8 @@ body {
     text-align: right;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar .logo {
@@ -60,7 +62,31 @@ body {
     color: #000;
 }
 
-/* 主要内容区域 */
+/* ===== 侧边栏底部社交图标 ===== */
+.sidebar-social {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.sidebar-social a {
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.sidebar-social a:hover {
+    color: #000;
+}
+
+.sidebar-social svg {
+    display: block;
+}
+
+/* ===== 主要内容区域 ===== */
 .main-content {
     flex: 1;
     order: 1;
@@ -68,7 +94,6 @@ body {
     max-width: 100%;
 }
 
-/* 页面标题 */
 .page-title {
     font-size: 1.3rem;
     font-weight: bold;
@@ -76,7 +101,7 @@ body {
     margin-bottom: 0.75rem;
 }
 
-/* 首页图片 */
+/* ===== 首页图片 ===== */
 .home-image {
     display: block;
     width: 40%;
@@ -86,15 +111,15 @@ body {
     border-radius: 4px;
 }
 
-/* ===== release 列表页 ===== */
+/* ===== 列表页（release / event / article） ===== */
 .post-item {
-    margin-bottom: 1rem;      /* 不同发行之间的间距 */
+    margin-bottom: 1rem;
     border-bottom: none;
     padding-bottom: 0;
 }
 
 .post-item h2 {
-    margin-bottom: 0.05rem;   /* 同一发行的中英文紧贴 */
+    margin-bottom: 0.05rem;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.4;
@@ -115,11 +140,7 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.about-content p {
-    margin-bottom: 1rem;
-}
-
-/* release 链接样式 */
+/* ===== release / event / article 链接与颜色 ===== */
 .release-link {
     text-decoration: none;
     color: #333;
@@ -127,21 +148,26 @@ body {
 .release-link:hover {
     text-decoration: underline;
 }
+
 .blue-text {
     color: #0066cc;
 }
 
-/* 未发行文字灰色 */
 .unreleased {
     color: #999 !important;
 }
 
-/* ===== release 详情页 ===== */
+/* ===== About 页 ===== */
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+/* ===== Release 详情页 ===== */
 .release-detail {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    max-width: 850px;         /* 限制整体宽度，让右侧栏靠左 */
+    max-width: 850px;
 }
 
 .release-left {
@@ -200,6 +226,17 @@ body {
     margin: 0;
 }
 
+.release-notes {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.release-notes p {
+    margin-bottom: 1.5rem;
+}
+.release-notes p:last-child {
+    margin-bottom: 0;
+}
+
 .release-links p {
     margin: 0 0 0.2rem 0;
 }
@@ -211,7 +248,113 @@ body {
     text-decoration: underline;
 }
 
-/* 响应式：小屏幕时改为上下布局 */
+/* 发行格式信息（cd / digital 等） */
+.release-format {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+.release-format p {
+    margin: 0 0 0.2rem 0;
+}
+
+/* ===== Article 详情页（双语分栏） ===== */
+.article-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+.article-header .title-zh,
+.article-header .title-en {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #999;
+}
+
+.article-bilingual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.article-bilingual .lang-zh,
+.article-bilingual .lang-en {
+    min-width: 0;
+}
+
+/* Article 单语正文（备用） */
+.article-body {
+    max-width: 680px;
+    line-height: 1.8;
+}
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+.article-body em {
+    font-style: italic;
+}
+
+/* ===== Event 详情页 ===== */
+.event-detail {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 900px;
+}
+
+.event-poster {
+    flex-shrink: 0;
+    width: 320px;
+}
+
+.event-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.poster-credit {
+    font-size: 0.75rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+.event-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.event-date,
+.event-venue {
+    margin-bottom: 0.3rem;
+}
+
+.event-address {
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.event-guests {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.event-guests .special {
+    font-style: italic;
+    color: #999;
+}
+
+/* ===== 响应式：小屏幕改为上下布局 ===== */
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -237,6 +380,10 @@ body {
     .sidebar .logo {
         margin-bottom: 0.5rem;
     }
+    .sidebar-social {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
     .home-image {
         width: 90%;
         margin-top: 10vh;
@@ -247,6 +394,25 @@ body {
         max-width: 100%;
     }
     .release-right {
+        width: 100%;
+        max-width: 400px;
+    }
+    .article-header,
+    .article-bilingual {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .article-header {
+        margin-bottom: 1.5rem;
+    }
+    .article-bilingual {
+        gap: 2rem;
+    }
+    .event-detail {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .event-poster {
         width: 100%;
         max-width: 400px;
     }
